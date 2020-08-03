@@ -2,7 +2,7 @@
 @tailwind components;
 
 .card {
-  @apply p-10 mx-3 my-8 z-20;
+  @apply p-10 mx-3 my-8 z-20 transition duration-200 ease-out;
   height: 75vh;
 }
 
@@ -17,6 +17,15 @@
 .cardDummy {
   @apply p-10 mx-3 my-8 z-20;
   height: 75vh;
+}
+
+.headPin {
+  @apply origin-center transform transition duration-200 ease-out;
+  height: 7vh;
+}
+
+.headPin:hover {
+  @apply origin-center transform rotate-45 transition duration-300 ease-in-out;
 }
 
 @screen sm {
