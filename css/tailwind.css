@@ -7,11 +7,7 @@
 }
 
 .card:hover {
-  @apply shadow-xl scale-125 transition duration-300 ease-in-out;
-}
-
-.whiteShadow {
-  box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.9);
+  @apply shadow-xl transition-all duration-300 ease-in-out;
 }
 
 .cardDummy {
@@ -19,8 +15,16 @@
   height: 75vh;
 }
 
+.stack-cards__item {
+  @apply sticky m-2;
+  top: 40%;
+  transform-origin: center top;
+  box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.1),
+    0 4px 8px -2px rgba(0, 0, 0, 0.05);
+}
+
 .headPin {
-  @apply origin-center transform transition duration-200 ease-out;
+  @apply origin-center rotate-0 transition duration-200 ease-out;
   height: 7vh;
 }
 

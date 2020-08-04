@@ -633,15 +633,9 @@ video {
 
 .card:hover {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --transform-scale-x: 1.25;
-  --transform-scale-y: 1.25;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.whiteShadow {
-  box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.9);
 }
 
 .cardDummy {
@@ -654,16 +648,19 @@ video {
   height: 75vh;
 }
 
+.stack-cards__item {
+  position: -webkit-sticky;
+  position: sticky;
+  margin: 0.5rem;
+  top: 40%;
+  transform-origin: center top;
+  box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.1),
+    0 4px 8px -2px rgba(0, 0, 0, 0.05);
+}
+
 .headPin {
   transform-origin: center;
-  --transform-translate-x: 0;
-  --transform-translate-y: 0;
   --transform-rotate: 0;
-  --transform-skew-x: 0;
-  --transform-skew-y: 0;
-  --transform-scale-x: 1;
-  --transform-scale-y: 1;
-  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
